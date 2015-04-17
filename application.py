@@ -2,7 +2,10 @@
 # import the Flask class from the flask module
 from flask import Flask
 # create the application object
-app = Flask(__name__)
+application = Flask(__name__)
+
+app = application
+
 # use decorators to link the function to a url
 
 # error handling
@@ -41,4 +44,4 @@ def index(name):
     
 # start the development server using the run() method
 if __name__ == "__main__":
-    app.run()
+    app.run(host='0.0.0.0')
